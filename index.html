@@ -26,10 +26,49 @@
       line-height:1.7;
     }
     .wrap{
-      max-width: 920px;
-      margin: 40px auto;
-      padding: 0 16px 48px;
-    }
+  max-width: 920px;
+  margin: 18px auto 40px;
+  padding: 0 16px 48px;
+}
+
+/* Top bar navigation */
+.topbar{
+  max-width: 920px;
+  margin: 32px auto 0;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: rgba(15,26,43,.55);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand{
+  font-weight: 800;
+  letter-spacing: .2px;
+  color: var(--text);
+}
+.nav a{
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  display: inline-block;
+}
+.nav a:hover{
+  color: var(--text);
+  border-color: var(--border);
+  background: rgba(255,255,255,.03);
+}
+.nav a.active{
+  color: var(--text);
+  border-color: rgba(56,189,248,.35);
+  background: rgba(56,189,248,.08);
+}
+
     .card{
       background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
       border: 1px solid var(--border);
@@ -117,6 +156,15 @@
   </style>
 </head>
 <body>
+  <!-- Top Navigation -->
+  <div class="topbar">
+    <div class="brand">GooZoo</div>
+    <div class="nav">
+      <a class="active" href="./index.html">Policy</a>
+      <a href="./about.html">About</a>
+    </div>
+  </div>
+  
   <div class="wrap">
     <div class="card">
       <header>
